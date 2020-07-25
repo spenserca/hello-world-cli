@@ -1,0 +1,36 @@
+{
+  "name": "hello-world-cli",
+  "version": "0.0.1",
+  "description": "A CLI that writes greeting messages",
+  "main": "dist/index.js",
+  "bin": {
+    "hello-world": "dist/index.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/ && rm ~/AppData/Roaming/npm/hello-world.* && rm ~/AppData/Roaming/npm/hello-world",
+    "build": "npm run clean && tsc -p . && npm link",
+    "format": "prettier-standard --format",
+    "format:check": "prettier-standard --check",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Spenser Andreassen <spenserca@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^6.0.0",
+    "figlet": "^1.5.0",
+    "yargs": "^15.4.1"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.0",
+    "@types/jest": "^26.0.7",
+    "@types/node": "^14.0.26",
+    "jest": "^26.1.0",
+    "prettier-standard": "^16.4.1",
+    "ts-jest": "^26.1.3",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
