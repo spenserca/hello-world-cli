@@ -8,7 +8,7 @@ const version = require('../package.json').version;
 clear();
 
 program.version(version)
-  .option('-p, --person <name>', 'The person to greet', 'World');
+  .option('-P, --person <name>', 'The person to greet', 'World');
 
 program.parse(process.argv);
 
